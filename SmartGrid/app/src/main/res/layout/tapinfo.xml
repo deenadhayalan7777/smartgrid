@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tapidTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="1001"
+        android:textAlignment="viewStart"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textStyle="bold"
+        custom:layout_constraintBottom_toTopOf="@+id/textView"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toEndOf="@+id/textView2"
+        custom:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Allocated Water"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textStyle="bold"
+        custom:layout_constraintBottom_toTopOf="@+id/allocatedTextView"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintHorizontal_bias="0.0"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/tapidTextView" />
+
+    <TextView
+        android:id="@+id/allocatedTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="50"
+        android:textAlignment="textEnd"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textStyle="bold"
+        custom:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        custom:layout_constraintEnd_toStartOf="@+id/textView5"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Available Water"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textStyle="bold"
+        custom:layout_constraintBottom_toTopOf="@+id/waterLevelBar"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <com.github.lzyzsd.circleprogress.CircleProgress
+        android:id="@+id/waterLevelBar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        custom:circle_progress="80"
+        custom:layout_constraintBottom_toTopOf="@+id/viewReportsButton"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        custom:layout_constraintBottom_toTopOf="@+id/textView3"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/allocatedTextView">
+
+        <Switch
+            android:id="@+id/tapSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:checked="false"
+            android:text="Water Flow"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            android:textOff="Tuen OFF"
+            android:textOn="Turn ON"
+            android:textStyle="bold"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/locationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@android:color/white"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintTop_toTopOf="parent"
+            custom:srcCompat="@drawable/marker" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="View Location"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            android:textStyle="bold"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toStartOf="@+id/locationButton"
+            custom:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/viewReportsButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#35b781"
+        android:text="View Reports"
+        custom:layout_constraintBottom_toBottomOf="parent"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/waterLevelBar" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Tap ID: "
+        android:textAlignment="viewEnd"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textStyle="bold"
+        custom:layout_constraintBottom_toTopOf="@+id/textView"
+        custom:layout_constraintEnd_toStartOf="@+id/tapidTextView"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Litres"
+        android:textAlignment="viewStart"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textStyle="bold"
+        custom:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toEndOf="@+id/allocatedTextView"
+        custom:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</android.support.constraint.ConstraintLayout>

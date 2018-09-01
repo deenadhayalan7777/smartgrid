@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.Activity.TapSearchActivity">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="32dp"
+        android:gravity="center"
+        android:text="Amount"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/amountEditText"
+        app:layout_constraintEnd_toStartOf="@+id/amountEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/amountEditText" />
+
+    <EditText
+        android:id="@+id/amountEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#66bb6a"
+        android:ems="10"
+        android:hint="add water"
+        android:inputType="number"
+        android:singleLine="true"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/selectTapsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/selectTapsButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#66bb6a"
+        android:onClick="selectTaps"
+        android:text="select Taps"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountEditText" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Taps Selected"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/addwaterButton"
+        app:layout_constraintEnd_toStartOf="@+id/tapsSelectedTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectTapsButton" />
+
+    <Button
+        android:id="@+id/addwaterButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#66bb6a"
+        android:onClick="addWater"
+        android:text="ADD water"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/tapsSelectedTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="0"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+</android.support.constraint.ConstraintLayout>

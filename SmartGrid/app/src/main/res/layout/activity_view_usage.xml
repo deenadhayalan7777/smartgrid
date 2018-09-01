@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.Activity.ViewUsageActivity">
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="Select Date"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textColor="#66bb6a"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/dateButton"
+        app:layout_constraintEnd_toStartOf="@+id/dateButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dateButton" />
+
+    <ImageButton
+        android:id="@+id/dateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/cardview_light_background"
+        android:onClick="showDatePickerDialog"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dateTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/calender" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Allocated Water"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textColor="#66bb6a"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/allocatedTextView"
+        app:layout_constraintEnd_toEndOf="@+id/dateTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateButton" />
+
+    <TextView
+        android:id="@+id/allocatedTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="right|center_vertical"
+        android:text="25000"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textColor="@color/card"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="2dp"
+        android:gravity="left|center_vertical"
+        android:text="Litres"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+        android:textColor="#66bb6a"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/allocatedTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/allocatedTextView"
+        app:layout_constraintTop_toTopOf="@+id/allocatedTextView" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Available Water"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textColor="#66bb6a"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/circleProgress"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allocatedTextView" />
+
+    <com.github.lzyzsd.circleprogress.CircleProgress
+        android:id="@+id/circleProgress"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:circle_finished_color="@android:color/holo_blue_dark"
+        app:circle_progress="75"
+        app:circle_text_color="#e91e63"
+        app:circle_unfinished_color="@android:color/holo_blue_bright"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Total Savings of the Day"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textColor="#66bb6a"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/savingsTexView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circleProgress" />
+
+    <TextView
+        android:id="@+id/savingsTexView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="8dp"
+        android:gravity="right|center_vertical"
+        android:text="6000"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textColor="@color/card"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+        app:layout_constraintEnd_toStartOf="@+id/textView15"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="2dp"
+        android:gravity="left|center_vertical"
+        android:text="Litres"
+        android:textColor="#66bb6a"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/savingsTexView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/savingsTexView"
+        app:layout_constraintTop_toTopOf="@+id/savingsTexView" />
+
+</android.support.constraint.ConstraintLayout>
